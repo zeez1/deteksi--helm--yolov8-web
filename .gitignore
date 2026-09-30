@@ -1,0 +1,45 @@
+# Python environments and bytecode
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Datasets, generated dataset caches, and experiment outputs
+dataset/
+experiments/
+runs/
+weights/
+*.cache
+*.pt
+*.pth
+*.onnx
+*.engine
+*.torchscript
+
+# Local reports may contain absolute machine-specific paths
+reports/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Secrets and private credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
