@@ -15,6 +15,7 @@ desktop.ini
 
 # Datasets, generated dataset caches, and experiment outputs
 dataset/
+*.zip
 experiments/
 runs/
 weights/

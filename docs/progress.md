@@ -44,3 +44,11 @@ Checkpoint dan laporan rinci berada di folder eksperimen/laporan lokal dan tidak
 - Eksperimen M1–M5: **belum dilakukan**.
 - Aplikasi/website: **belum dilakukan**.
 - Analisis perbandingan dan kesimpulan penelitian: **belum dilakukan**.
+
+## Rencana tahap berikutnya
+
+1. Menentukan dan menjalankan eksperimen lanjutan M1–M5.
+2. Membandingkan hasil eksperimen dengan evaluasi validation dan test.
+3. Memilih model untuk integrasi aplikasi berbasis web.
+4. Mengimplementasikan dan menguji aplikasi deteksi.
+5. Menyusun analisis, kesimpulan, dan dokumentasi penelitian.

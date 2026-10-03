@@ -1,21 +1,46 @@
 # Penerapan YOLOv8 untuk Deteksi Helm Pengendara Sepeda Motor Berbasis Web
 
+## Deskripsi
+
+Penelitian ini menerapkan model deteksi objek YOLOv8 untuk mengenali pengendara sepeda motor yang menggunakan atau tidak menggunakan helm. Model akan menjadi komponen deteksi pada aplikasi berbasis web.
+
 ## Tujuan penelitian
 
-Penelitian ini menerapkan YOLOv8 untuk mendeteksi penggunaan helm pada pengendara sepeda motor sebagai dasar aplikasi berbasis web. Implementasi website **belum dilakukan**.
+- Menyiapkan dan memvalidasi dataset deteksi helm.
+- Menerapkan YOLOv8 untuk mendeteksi kelas `helmet` dan `no-helmet`.
+- Mengevaluasi model dan menggunakan hasilnya sebagai dasar pengembangan aplikasi web.
 
 ## Metode
 
-Model deteksi yang digunakan adalah YOLOv8 dari Ultralytics. Eksperimen baseline M0 menggunakan `yolov8n.pt` tanpa augmentasi, dengan dataset original yang telah dibagi menjadi train, validation, dan test.
+Penelitian menggunakan YOLOv8 dari Ultralytics. Baseline M0 menggunakan model YOLOv8n (`yolov8n.pt`) tanpa augmentasi, dengan dataset yang dibagi menjadi train, validation, dan test. Catatan pelaksanaan dan metrik eksperimen yang sudah tercatat tersedia di [docs/progress.md](docs/progress.md).
 
 ## Dataset
 
-Dataset YOLO berisi 908 gambar dan 908 label, terbagi menjadi 635 train, 181 validation, dan 92 test. Dataset memiliki dua kelas:
+Dataset terdiri atas 908 gambar dan 908 label: 635 data train, 181 validation, dan 92 test. Dataset memiliki dua kelas:
 
-- `0`: helmet
-- `1`: no-helmet
+- `0`: `helmet`
+- `1`: `no-helmet`
 
-Audit anotasi dan validasi pembagian dataset selesai. Dataset, ZIP sumber, gambar, dan label tidak disimpan di repository ini; lihat `.gitignore`.
+Audit anotasi dan validasi pembagian dataset telah dicatat selesai. Arsip sumber dataset lokal berukuran sekitar 260 MB. Dataset, arsip ZIP, gambar, dan label tidak disertakan di repository; aturan pengabaiannya ada di [.gitignore](.gitignore).
+
+## Progress saat ini
+
+- Audit dan pembagian dataset: selesai.
+- Smoke test YOLOv8n: selesai.
+- Training baseline M0 dan evaluasi validation/test: selesai menurut catatan eksperimen.
+- Eksperimen M1–M5: belum dilakukan.
+- Implementasi aplikasi/website: belum dilakukan.
+- Analisis perbandingan dan kesimpulan penelitian: belum dilakukan.
+
+Tidak ada klaim hasil eksperimen baru yang ditambahkan dalam README ini. Rincian hasil yang sudah tercatat beserta konteksnya dapat dilihat di [docs/progress.md](docs/progress.md).
+
+## Rencana tahap berikutnya
+
+1. Menentukan dan menjalankan eksperimen lanjutan M1–M5.
+2. Membandingkan hasil eksperimen berdasarkan evaluasi validation dan test.
+3. Menetapkan model yang akan digunakan pada aplikasi.
+4. Mengimplementasikan dan menguji aplikasi deteksi berbasis web.
+5. Menyusun analisis, kesimpulan, dan dokumentasi penelitian.
 
 ## Struktur proyek
 
@@ -31,15 +56,4 @@ Audit anotasi dan validasi pembagian dataset selesai. Dataset, ZIP sumber, gamba
 └── README.md
 ```
 
-Folder lokal `dataset/`, `experiments/`, `reports/`, `runs/`, dan `weights/` diabaikan Git. Artefak dataset dan model besar tidak dimasukkan ke GitHub.
-
-## Status pengerjaan
-
-- Audit dan persiapan dataset: selesai.
-- Smoke test YOLOv8n 2 epoch: berhasil.
-- Training baseline M0 YOLOv8n 50 epoch tanpa augmentasi: selesai.
-- Evaluasi validation dan test M0: selesai.
-- Implementasi website: belum dilakukan.
-- Eksperimen M1–M5: belum dilakukan.
-
-Ringkasan progres dan metrik yang benar-benar tercatat ada di [docs/progress.md](docs/progress.md). Repository ini belum memiliki commit awal; file yang akan di-commit dapat diperiksa dengan `git status`.
+Folder lokal `dataset/`, `experiments/`, `reports/`, `runs/`, dan `weights/`, lingkungan virtual, serta berkas model dan arsip ZIP diabaikan Git. Repository sudah memiliki commit awal; perubahan dokumentasi/configuration berikutnya dapat ditinjau melalui `git status`. Tidak ada perubahan yang di-commit atau di-push sebagai bagian dari persiapan ini.
