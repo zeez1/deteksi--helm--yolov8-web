@@ -124,3 +124,9 @@ Script menyimpan gambar beranotasi di `inference/M5/run_<id>/`.
 ## Distribusi model
 
 Checkpoint M5 yang digunakan aplikasi berukuran sekitar 5.94 MiB dan cukup kecil untuk Git biasa. Pola `.gitignore` tetap mengecualikan `experiments/`, `*.pt`, `dataset/`, dan `reports/`; hanya checkpoint M5 yang dipilih untuk ditambahkan secara eksplisit. Git LFS tidak diperlukan untuk file ini. Dataset, laporan, log training, dan checkpoint lain tidak termasuk dalam distribusi. Inventaris checkpoint tercantum di [docs/progress.md](docs/progress.md).
+
+## Contoh hasil inferensi YOLOv8 M5
+
+Gambar berikut merupakan hasil inferensi model YOLOv8 M5 pada foto pengujian.
+
+![Hasil deteksi helm YOLOv8 M5](inference/M5/hasil-deteksi.jpg)
